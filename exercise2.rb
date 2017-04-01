@@ -1,5 +1,5 @@
 class Cats
-  attr_accessor :name, :preferred_food, :meal_time
+  attr_accessor :name, :preferred_food, :meal_time, :eats_at
   def initialize (name, preferred_food, meal_time)
     @name = name
     @preferred_food = preferred_food
@@ -13,8 +13,8 @@ class Cats
     end
   end
  def meow(name)
-   if @name == "Felix" then puts "I'm a Felix, polymath and optimist"
-   else puts "I'm thylvethter, I have a thpeech impediment."
+   if @name == "Felix" then puts "I'm a Felix, I eat #{@preferred_food} at #{meal_time} "
+   else puts "I'm Thylvethter, I eat #{@preferred_food} at #{meal_time}."
    end
  end
 
