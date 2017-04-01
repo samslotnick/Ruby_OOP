@@ -20,7 +20,10 @@ class BankAccount
     def withdraw(amount)
       @balance - amount
     end
+    def interest(amount)
+      @balance * 1 + @interest_rate
+    end
 end
 
 #my_account = BankAccount.new(100, 0.02)
-# puts my_account.depsosit (1)
+# puts my_account.deposit (1)
