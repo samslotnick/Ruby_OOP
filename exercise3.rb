@@ -18,6 +18,9 @@ class Player
     def level_up
      return @lives = lives + 1
     end
+    def reset_hp
+      @health_points = health_points = 10
+    end
 
     def collect_treasure
     puts @gold_coins = gold_coins + 1
@@ -30,22 +33,19 @@ class Player
     def do_battle
       damage = 5
       puts @health_points = health_points - damage
-        if @health_points == 0
-         return @lives = lives - 1
-       end
-       
+        if @health_points == 0 then puts @lives = lives - 1
+          return reset_hp
+        end
+     end
+
+     def restart
+     @health_points = health_points = 10
+     @lives = lives = 5
+     @gold_coins = gold_coins = 0
      end
 
 
 
-# sam = Player.new("Sam", 0, 0, 0)
-
-
-
-# sam.level_up(@lives)
-
+# sam = Player.new("Sam")
 
 end
-#@@lives = 10
-#@@gold_coins = 0
-#@@health_points = 10
