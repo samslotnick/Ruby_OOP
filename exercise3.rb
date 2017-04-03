@@ -31,7 +31,7 @@ class Player
     end
 
     def do_battle
-      damage = 5
+      damage = 1
       puts @health_points = health_points - damage
         if @health_points == 0 then puts @lives = lives - 1
           return reset_hp
